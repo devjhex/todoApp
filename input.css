@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .success {
+        @apply text-green-400 bg-green-700;
+    }
+    .danger {
+        @apply text-red-400 bg-red-700;
+    }
+    .grocery-item{
+        @apply flex justify-between;
+    }
+}

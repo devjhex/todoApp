@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <script src="https://kit.fontawesome.com/7666dfc9fb.js" crossorigin="anonymous"></script>
+    <title>Todo App</title>
+</head>
+<body class="flex justify-center items-center h-screen bg-slate-600"> 
+    <main>
+        <section>
+            <!-- Stopped at 7:17 -->
+            
+            <article class="bg-slate-400 p-8 rounded-xl">
+                <p class="alert text-center text-xl font-bold hidden p-1 rounded-xl">Item update successfully</p>
+                <h1 class="text-2xl text-center font-bold">Todo App</h1>
+                <!-- form -->
+                <form class="todoForm mt-4">
+                    <div class="mt-2">
+                    <input class="input p-2 rounded-l-xl outline-none" type="text" placeholder="e.g Watching fortnight">
+                    <button type="submit" class="submitBtn bg-slate-900 text-white p-2 -ml-2 rounded-r-xl border border-transparent hover:bg-slate-700 hover:border-white transition-all duration-500">Submit</button>
+                    </div>
+                </form>
+               
+            <div class="todoContainer mt-4 hidden">
+                 <!-- list -->
+                 <div class="todoList">
+                 </div>
+                <!-- Button -->
+                <button class="clearBtn mt-4 block mx-auto text-red-600 text-xl">Clear items</button>
+            </div>
+            </article>
+
+        </section>
+        
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
