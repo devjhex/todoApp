@@ -11,7 +11,7 @@ let editElement;
 let editID;
 
 let clearBtn = document.querySelector('.clearBtn');
-console.log(clearBtn);
+
 /* Event listeners***** */
 form.addEventListener("submit",addItem);
 clearBtn.addEventListener("click",clearItems);
@@ -42,7 +42,7 @@ function addItem(e){
 function clearItems(){
 
 let items = document.querySelectorAll(".grocery-item");
-console.log(items);
+
 if(items.length>0){
     items.forEach(function(item){
        todoList.remove(item); 
@@ -88,7 +88,7 @@ function deleteItem(e){
 
     /* Remove from local storage */
     removeFromLocalStorage(id);
-    console.log(id);
+
     /* set default */
     setDefault()
    
@@ -119,7 +119,6 @@ function addToLocalStorage(id, value){
 
     let grocery = {id,value};
     let items = getLocalStorage();
-    console.log(items);
 
     items.push(grocery);
     localStorage.setItem('list',JSON.stringify(items));
@@ -159,7 +158,6 @@ function getLocalStorage(){
 /* Setup items */
 function setUpItems(){
     let items = getLocalStorage();
-    console.log(items);
     if(items.length > 0){
         items.forEach(function(item){
             createListItem(item.id, item.value);
@@ -171,7 +169,6 @@ let element = document.createElement("article");
         let dataID = document.createAttribute("data-id");
         element.setAttributeNode(dataID);
         element.dataset.id = id;
-        // console.log(element);
         element.classList.add('grocery-item');
         element.innerHTML = `   
         <p class="text-black">${value}</p>
